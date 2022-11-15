@@ -1,25 +1,69 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <title>Начало работы с CSS</title>
-</head>
+nav.primary-navigation {
+  margin: 0 auto;
+  display: block;
+  padding: 120px 0 0 0;
+  text-align: center;
+  font-size: 16px;
+}
+nav.primary-navigation ul li {
+  list-style: none;
+  margin: 0 auto;
+  border-left: 2px solid #3ca0e7;
+  display: inline-block;
+  padding: 0 30px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  font-family: arvo;
+}
+nav.primary-navigation li a {
+  color: black;
+}
+nav.primary-navigation li a:hover {
+  color: #3ca0e7;
+}
+nav.primary-navigation li:hover {
+  cursor: pointer;
+}
+nav.primary-navigation ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding-left: 0;
+  left: 0;
+  display: none;
+  background: white;
+}
+nav.primary-navigation ul li:hover > ul,
+nav.primary-navigation ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  min-width: 250px;
+  text-align: left;
+  padding-top: 20px;
+  box-shadow: 0px 3px 5px -1px #ccc;
+}
+nav.primary-navigation ul li ul li {
+  clear: both;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  border-style: none;
+}
+nav.primary-navigation ul li ul li a:hover {
+  padding-left: 10px;
+  border-left: 2px solid #3ca0e7;
+  transition: all 0.3s ease;
+}
 
-<body>
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #3CA0E7;
+}
 
-    <h1>Я заголовок первого уровня</h1>
-
-    <p>Это абзац. В нём есть <span>элемент span</span>,
-а также <a href="http://example.com">ссылка</a>.</p>
-
-    <p>Это второй абзац. Он содержит <em>акцентирующий</em> текст.</p>
-
-    <ul>
-        <li>Элемент один</li>
-        <li>Элемент два</li>
-        <li>Элемент <em>три</em></li>
-    </ul>
-
-</body>
-
-</html>
+ul li ul li a {
+  transition: all 0.5s ease;
+}
